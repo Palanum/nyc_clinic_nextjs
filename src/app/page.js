@@ -1,50 +1,24 @@
 import HeroBanner from "@/components/home/HeroBanner";
-import SectionHeader from "@/components/layout/SectionHeader";
+import StatBarSection from "@/components/home/StatBarSection";
+import SectionHeader from "@/components/ui/SectionHeader";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
-
       {/* HERO */}
       <HeroBanner />
+
       {/* TRUST BAR */}
-      <section className="bg-navy text-center">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4">
-          
-          {[
-            { num: "10+", label: "Years Experience", th: "ประสบการณ์" },
-            { num: "5K+", label: "Happy Clients", th: "ลูกค้า" },
-            { num: "20+", label: "Services", th: "บริการ" },
-            { num: "100%", label: "Satisfaction", th: "ความพึงพอใจ" },
-          ].map((item, i) => (
-            <div key={i} className="py-12 border-r border-gold/10 last:border-none">
-              
-              <h3 className="text-4xl font-heading text-gold">
-                {item.num}
-              </h3>
-
-              <p className="text-xs tracking-widest text-gray-400 mt-2 uppercase">
-                {item.label}
-              </p>
-
-              <p className="text-xs text-gray-500 font-thai">
-                {item.th}
-              </p>
-            </div>
-          ))}
-
-        </div>
-      </section>
+      <StatBarSection />
 
       {/* SERVICES */}
       <section className="py-32 px-6 bg-cream">
-        <SectionHeader 
+        <SectionHeader
           title="Our Services / บริการของเรา"
           subtitle="Services"
         />
 
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
           {[
             {
               title: "Facial Treatment",
@@ -66,26 +40,19 @@ export default function Home() {
               key={i}
               className="glass-card p-8 hover:scale-105 transition duration-300"
             >
-              <h3 className="font-heading text-2xl text-navy">
-                {s.title}
-              </h3>
+              <h3 className="font-heading text-2xl text-navy">{s.title}</h3>
 
-              <p className="text-gray-600 mt-3">
-                {s.desc}
-              </p>
+              <p className="text-gray-600 mt-3">{s.desc}</p>
 
-              <p className="text-gray-400 mt-2 font-thai text-sm">
-                {s.th}
-              </p>
+              <p className="text-gray-400 mt-2 font-thai text-sm">{s.th}</p>
             </div>
           ))}
-
         </div>
       </section>
 
       {/* ABOUT SECTION */}
       <section className="py-32 px-6 bg-white text-center">
-        <SectionHeader 
+        <SectionHeader
           title="About NYC Clinic / เกี่ยวกับเรา"
           subtitle="About"
         />
@@ -96,20 +63,19 @@ export default function Home() {
         </p>
 
         <p className="max-w-3xl mx-auto text-gray-500 mt-4 font-thai">
-          NYC Clinic เป็นคลินิกความงามระดับพรีเมียม ที่ให้บริการด้วยเทคโนโลยีทันสมัย
-          และทีมแพทย์ผู้เชี่ยวชาญ
+          NYC Clinic เป็นคลินิกความงามระดับพรีเมียม
+          ที่ให้บริการด้วยเทคโนโลยีทันสมัย และทีมแพทย์ผู้เชี่ยวชาญ
         </p>
       </section>
 
       {/* REVIEWS */}
       <section className="py-32 px-6 bg-cream">
-        <SectionHeader 
+        <SectionHeader
           title="Client Reviews / รีวิวลูกค้า"
           subtitle="Reviews"
         />
 
         <div className="max-w-4xl mx-auto space-y-6">
-
           <div className="glass-card p-6">
             <p>"Amazing experience, very professional."</p>
             <p className="text-sm text-gray-400 mt-2">
@@ -119,37 +85,27 @@ export default function Home() {
 
           <div className="glass-card p-6">
             <p>"Highly recommended clinic."</p>
-            <p className="text-sm text-gray-400 mt-2">
-              แนะนำเลย คลินิกดีมาก
-            </p>
+            <p className="text-sm text-gray-400 mt-2">แนะนำเลย คลินิกดีมาก</p>
           </div>
-
         </div>
       </section>
 
       {/* CTA / CONTACT */}
       <section className="py-32 px-6 bg-navy text-center">
-        
         <h2 className="font-heading text-4xl text-gold">
           Book Your Consultation
         </h2>
 
-        <p className="text-gold-light mt-4">
-          Start your beauty journey today
-        </p>
+        <p className="text-gold-light mt-4">Start your beauty journey today</p>
 
         <p className="text-gold-light font-thai mt-2">
           เริ่มต้นการดูแลตัวเองวันนี้
         </p>
 
         <div className="mt-10">
-          <button className="btn-primary">
-            Contact Us / ติดต่อเรา
-          </button>
+          <button className="btn-primary">Contact Us / ติดต่อเรา</button>
         </div>
-
       </section>
-
     </main>
   );
 }
