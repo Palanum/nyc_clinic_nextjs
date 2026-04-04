@@ -1,0 +1,30 @@
+@theme {
+  /* Brand Palette */
+  --color-navy: #1a1f3a;
+  --color-navy-deep: #0f1225;
+  --color-navy-light: #252b4d;
+
+  --color-rose-gold: #c4956a;
+  --color-rose-gold-light: #d4aa82;
+  --color-rose-gold-pale: #e8cdb5;
+  --color-rose-gold-dark: #a87a52;
+
+  --color-cream: #faf6f1;
+  --color-cream-dark: #f0e8df;
+
+  --color-success: #4a7c59;
+  --color-error: #c45b5b;
+
+  /* Fonts — generates font-display, font-sans, etc. */
+  --font-display: "Playfair Display", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-thai-serif: "Noto Serif Thai", serif;
+  --font-thai-sans: "Prompt", sans-serif;
+
+  /* Custom text sizes Tailwind doesn't have */
+  --text-hero: clamp(5rem, 12vw, 10rem);
+
+  /* Custom tracking */
+  --tracking-luxury: 0.08em;
+}

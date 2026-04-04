@@ -1,0 +1,15 @@
+:root {
+  --color-primary: var(--color-rose-gold);
+  --color-primary-light: var(--color-rose-gold-pale);
+  --color-primary-dark: var(--color-rose-gold-dark);
+
+  --color-bg-main: var(--color-navy-deep);
+  --color-bg-soft: var(--color-navy);
+  --color-bg-cream: var(--color-cream);
+
+  --color-text-main: #111111;
+  --color-text-muted: #6b7280;
+  --color-text-light: #ffffff;
+
+  --shadow-luxury: 0 10px 40px rgba(196, 149, 106, 0.3);
+}
