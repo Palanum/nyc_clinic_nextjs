@@ -1,11 +1,7 @@
-import Navbar from "./Navbar";
-import TopBar from "./Topbar";
+import React from "react";
 
-export default function Header() {
-  return (
-    <header className="fixed w-full z-50">
-      {/* <TopBar /> */}
-      <Navbar />
-    </header>
-  );
+function Header() {
+  return <header>Header</header>;
 }
+
+export default Header;
