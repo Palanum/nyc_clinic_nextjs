@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center h-16 px-6">
         <h1 className="font-display text-xl text-primary">NYC Clinic</h1>
 
-        <div className="hidden md:flex gap-6 text-xs tracking-[0.3em] uppercase text-text-muted">
+        <div className="hidden md:flex gap-6 text-xs tracking-[0.3em] uppercase text-primary">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
@@ -28,7 +28,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-bg-soft px-6 py-6 space-y-4 text-sm uppercase tracking-widest text-text-muted">
+        <div className="md:hidden bg-bg-soft px-6 py-6 space-y-4 text-sm uppercase tracking-widest text-primary">
           <Link href="/" onClick={() => setOpen(false)}>
             Home / หน้าแรก
           </Link>
