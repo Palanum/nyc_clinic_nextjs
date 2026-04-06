@@ -1,9 +1,10 @@
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/ui/SectionHeader";
+
 
 export default function About() {
   return (
     <section className="py-24 px-6 bg-cream">
-      <SectionHeader 
+      <SectionHeader
         title="About Us / เกี่ยวกับเรา"
         subtitle="About"
       />

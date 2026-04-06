@@ -1,4 +1,5 @@
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/ui/SectionHeader";
+
 
 export default function Services() {
   const services = [
@@ -9,7 +10,7 @@ export default function Services() {
 
   return (
     <section className="py-24 px-6">
-      <SectionHeader 
+      <SectionHeader
         title="Our Services / บริการของเรา"
         subtitle="Services"
       />

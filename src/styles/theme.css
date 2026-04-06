@@ -18,13 +18,13 @@
   /* =============================
      💎 SEMANTIC — CHANGE TO RE-THEME
   ============================= */
-  --color-primary: #c4956a;
-  --color-primary-light: #e8cdb5;
-  --color-primary-dark: #a87a52;
+  --color-primary: #c4956a; /*color-rose-gold*/
+  --color-primary-light: #e8cdb5; /*color-rose-gold*/
+  --color-primary-dark: #a87a52; /*color-rose-gold-dark*/
 
-  --color-bg-main: #0f1225;
-  --color-bg-soft: #1a1f3a;
-  --color-bg-cream: #faf6f1;
+  --color-bg-main: #0f1225; /*color-navy-deep*/
+  --color-bg-soft: #1a1f3a; /*color-navy*/
+  --color-bg-cream: #faf6f1; /*color-cream*/
 
   --color-text-main: #111111;
   --color-text-muted: #6b7280;
