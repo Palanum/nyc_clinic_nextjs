@@ -157,6 +157,7 @@ function ServiceCardLink({
   children = "Explore →",
   className,
   onClick,
+  _parentIsLink = false,
 }) {
   const classes = cn(
     "self-start font-sans text-[10px] font-medium tracking-[3px] uppercase",
@@ -166,6 +167,11 @@ function ServiceCardLink({
     "bg-transparent no-underline",
     className,
   );
+
+  // When parent ServiceCard is already an <a>, render as <span> to avoid nested <a>
+  if (_parentIsLink) {
+    return <span className={classes}>{children}</span>;
+  }
 
   if (onClick) {
     return (
@@ -197,21 +203,35 @@ function ServiceCardBadge({ children = "SIGNATURE", className }) {
   );
 }
 
-// ─── Helper: inject `size` into sub-components ────────────────────────────────
+// ─── Helper: inject props into sub-components ────────────────────────────────
 
-function injectSizeProp(children, size) {
+function injectChildProps(children, size, parentIsLink) {
   if (!children) return children;
   return Children.map(children, (child) => {
     if (!isValidElement(child)) return child;
-    const targets = [
-      ServiceCardImage,
-      ServiceCardBody,
-      ServiceCardTitle,
-      ServiceCardDescription,
-    ];
-    if (targets.includes(child.type)) {
+
+    // ServiceCardBody: inject size AND recurse into its children
+    if (child.type === ServiceCardBody) {
+      return cloneElement(child, {
+        size,
+        children: injectChildProps(child.props.children, size, parentIsLink),
+      });
+    }
+
+    // Inject size into size-aware sub-components
+    if (
+      [ServiceCardImage, ServiceCardTitle, ServiceCardDescription].includes(
+        child.type,
+      )
+    ) {
       return cloneElement(child, { size });
     }
+
+    // Inject _parentIsLink into ServiceCardLink so it renders as <span> not <a>
+    if (child.type === ServiceCardLink) {
+      return cloneElement(child, { _parentIsLink: parentIsLink });
+    }
+
     return child;
   });
 }
@@ -252,10 +272,12 @@ const ServiceCard = forwardRef(function ServiceCard(
       : "var(--color-primary)",
   };
 
+  const parentIsLink = !!href;
+
   const content = (
     <>
       {badge && <ServiceCardBadge>{badge}</ServiceCardBadge>}
-      {injectSizeProp(children, size)}
+      {injectChildProps(children, size, parentIsLink)}
     </>
   );
 
