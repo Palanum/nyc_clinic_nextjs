@@ -14,7 +14,7 @@ function StatBarSection() {
             key={i}
             className="py-12 border-r border-gold/10 last:border-none"
           >
-            <h3 className="text-4xl font-heading text-gold">{item.num}</h3>
+            <h3 className="text-4xl font-heading text-primary">{item.num}</h3>
 
             <p className="text-xs tracking-widest text-gray-400 mt-2 uppercase">
               {item.label}
