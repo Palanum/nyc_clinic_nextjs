@@ -10,7 +10,7 @@ export default function AboutSection() {
         treatments with expert care and modern technology.
       </p>
 
-      <p className="max-w-3xl mx-auto text-gray-500 mt-4 font-thai">
+      <p className="max-w-3xl mx-auto text-gray-500 mt-4 font-thai-display">
         NYC Clinic เป็นคลินิกความงามระดับพรีเมียม
         ที่ให้บริการด้วยเทคโนโลยีทันสมัย และทีมแพทย์ผู้เชี่ยวชาญ
       </p>

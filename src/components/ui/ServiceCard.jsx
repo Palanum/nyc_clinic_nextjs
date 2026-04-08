@@ -128,7 +128,7 @@ function ServiceCardTitle({ children, thTitle, className, size = "default" }) {
         {children}
       </h3>
       {thTitle && (
-        <p className="font-thai-serif text-sm font-light text-[var(--nyc-card-title-color)] opacity-50 m-0 leading-snug">
+        <p className="font-thai-display text-sm font-light text-[var(--nyc-card-title-color)] opacity-50 m-0 leading-snug">
           {thTitle}
         </p>
       )}

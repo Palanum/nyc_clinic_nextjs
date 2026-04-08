@@ -32,15 +32,15 @@
 
   --color-success: #4a7c59;
   --color-error: #c45b5b;
-
   /* =============================
      🔤 FONTS
   ============================= */
-  --font-display: "Playfair Display", serif;
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Montserrat", sans-serif;
-  --font-thai-serif: "Noto Serif Thai", serif;
-  --font-thai-sans: "Prompt", sans-serif;
+  --font-display: "Playfair Display", serif; 
+  --font-accent: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+  --font-thai-display: "Taviraj", serif;
+  --font-thai-accent: "Noto Serif Thai", serif;
+  --font-thai-body: "Prompt", sans-serif;
 
   /* =============================
      📐 CUSTOM
