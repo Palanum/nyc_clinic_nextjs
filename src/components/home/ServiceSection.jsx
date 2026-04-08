@@ -76,7 +76,7 @@ export default function ServiceSection() {
           <h2 className="mb-2 font-display text-[clamp(28px,4vw,44px)] font-normal tracking-luxury text-navy">
             Treatments & Procedures
           </h2>
-          <p className="font-thai-serif text-[clamp(18px,2.5vw,24px)] font-light text-navy/50">
+          <p className="font-thai-display text-[clamp(18px,2.5vw,24px)] font-light text-navy/50">
             บริการของเรา
           </p>
         </div>

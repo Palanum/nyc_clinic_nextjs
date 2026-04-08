@@ -10,7 +10,7 @@ function ContactSection() {
 
       <p className="text-primary-light mt-4">Start your beauty journey today</p>
 
-      <p className="text-primary-light font-thai mt-2">
+      <p className="text-primary-light font-thai-display mt-2">
         เริ่มต้นการดูแลตัวเองวันนี้
       </p>
 

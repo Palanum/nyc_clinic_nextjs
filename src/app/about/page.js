@@ -14,7 +14,7 @@ export default function About() {
           NYC Clinic is a premium aesthetic clinic focusing on beauty and confidence.
         </p>
 
-        <p className="font-thai">
+        <p className="font-thai-display">
           NYC Clinic เป็นคลินิกความงามระดับพรีเมียม ที่มุ่งเน้นการเสริมสร้างความมั่นใจ
         </p>
       </div>

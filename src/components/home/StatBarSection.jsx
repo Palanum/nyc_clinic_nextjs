@@ -20,7 +20,7 @@ function StatBarSection() {
               {item.label}
             </p>
 
-            <p className="text-xs text-gray-500 font-thai">{item.th}</p>
+            <p className="text-xs text-gray-500 font-thai-display">{item.th}</p>
           </div>
         ))}
       </div>

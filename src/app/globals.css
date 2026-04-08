@@ -5,3 +5,53 @@
 @import "../styles/theme.css";
 @import "../styles/components/buttons.css";
 @import "../styles/components/cards.css";
+
+.hero-gradient {
+  background:linear-gradient(
+    160deg,
+    var(--color-primary-light) 0%,
+    var(--color-primary) 40%,
+    var(--color-primary-dark) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.hero-divider {
+  width:10rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,transparent,
+    var(--color-primary),
+    transparent
+  );
+  animation: fadeUp 1s 0.9s forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  };
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  };
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--color-primary-dark);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%,100% {
+    transform: scale(1);
+    opacity: 1;
+  };
+  50% {
+    transform: scale(0.5);
+    opacity: 0.6;
+  };
+}
