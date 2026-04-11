@@ -1,6 +1,4 @@
-function cn(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import cn from "@/helperfunction";
 
 export default function ButtonUi({
   children,
@@ -10,12 +8,12 @@ export default function ButtonUi({
   ...props
 }) {
   const base =
-    "inline-flex items-center justify-center tracking-[0.25em] text-xs transition-all duration-300";
+    "inline-flex items-center justify-center tracking-[0.2em] leading-none transition-all duration-300";
 
   const sizes = {
-    sm: "px-5 py-2 text-[0.65rem]",
-    md: "px-8 py-3 text-[0.75rem]",
-    lg: "px-10 py-4 text-[0.85rem]",
+    sm: "px-4 py-2 text-[0.65rem] md:text-[0.7rem]",
+    md: "px-7 py-3 text-[0.75rem] md:text-[0.85rem]",
+    lg: "px-10 py-4 text-[0.9rem] md:text-[1rem]",
   };
 
   const variants = {
