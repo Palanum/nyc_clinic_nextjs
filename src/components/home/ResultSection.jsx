@@ -48,7 +48,7 @@ const results = [
 
 function ResultSection() {
   return (
-    <section className="py-16 bg-bg-main">
+    <section className="py-16 bg-bg-cream">
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="mb-10 text-center">

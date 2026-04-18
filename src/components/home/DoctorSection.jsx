@@ -39,7 +39,7 @@ const doctors = [
 export default function DoctorSection() {
 
   return (
-    <section className="py-16 bg-bg-main">
+    <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* HEADER */}
