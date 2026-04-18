@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 
-export default function ImageWithFallback({ src, alt }) {
+export function ImageWithFallback({ src, alt }) {
     const [error, setError] = useState(false);
     const [loaded, setLoaded] = useState(false);
 
@@ -43,7 +43,7 @@ export default function ImageWithFallback({ src, alt }) {
 }
 
 
-export default function SmartImage({
+export function SmartImage({
     src,
     alt = "",
     className = "",
