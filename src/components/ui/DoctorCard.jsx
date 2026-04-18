@@ -13,15 +13,20 @@ export default function DoctorCard({
     desc1,
     desc2,
     details = [], // array for detail mode
+    hoverable = false,
     className,
 }) {
     return (
         <div
             className={cn(
                 "group bg-white rounded-2xl overflow-hidden",
-                "shadow-[0_2px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_56px_rgba(0,0,0,0.1)]",
-                "transition-all duration-300 hover:-translate-y-2",
-                className
+                "shadow-[0_2px_20px_rgba(0,0,0,0.15)]",
+
+                hoverable &&
+                "cursor-pointer hover:shadow-[0_5px_20px_rgba(0,0,0,0.3)] hover:-translate-y-2",
+
+                "transition-all duration-300",
+                className,
             )}
         >
             {/* IMAGE */}
