@@ -1,4 +1,5 @@
-import cn from "@/helperfunction";
+import cn from "@/utils/cn";
+
 
 export default function ButtonUi({
   children,

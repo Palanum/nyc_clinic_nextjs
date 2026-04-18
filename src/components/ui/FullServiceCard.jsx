@@ -2,46 +2,10 @@
 
 import { useEffect, useState } from "react";
 import ButtonUi from "./ButtonUi";
-import cn from "@/helperfunction";
 
-function ImageWithFallback({ src, alt }) {
-    const [error, setError] = useState(false);
-    const [loaded, setLoaded] = useState(false);
+import cn from "@/utils/cn";
+import { ImageWithFallback } from "@/utils/ImageUtils";
 
-    const isInvalid = !src || src.trim() === "";
-
-    useEffect(() => {
-        if (isInvalid) return;
-
-        const img = new Image();
-        img.src = src;
-
-        img.onload = () => setLoaded(true);
-        img.onerror = () => setError(true);
-    }, [src]);
-
-    if (error || isInvalid) {
-        return (
-            <span className="w-full h-full flex items-center justify-center bg-linear-to-br from-bg-soft to-[#2f3557] text-primary">
-                <span className="text-6xl opacity-40">✧</span>
-            </span>
-        );
-    }
-
-    if (!loaded) {
-        return (
-            <div className="w-full h-full bg-bg-soft animate-pulse" />
-        );
-    }
-
-    return (
-        <img
-            src={src}
-            alt={alt}
-            className="w-full h-full object-cover"
-        />
-    );
-}
 export default function SpotlightSection({
     slides = [],
     variant = "hero",
@@ -70,7 +34,7 @@ export default function SpotlightSection({
     return (
         <div className={cn(
             "w-full overflow-hidden bg-bg-main",
-            isSlider ? "relative h-screen" : "relative"
+            isSlider ? "relative h-screen" : "relative min-h-screen"
         )}>
 
             {slides.map((slide, i) => {
@@ -110,13 +74,13 @@ export default function SpotlightSection({
                             <div className="w-full md:w-1/2 flex items-center justify-center">
                                 <div className="w-full max-w-xl px-4 md:px-10 py-8 md:py-0">
                                     {/* Title */}
-                                    <h2 className="text-4xl md:text-6xl font-accent text-primary-light leading-tight mb-3">
+                                    <h2 className="text-4xl md:text-4xl lg:text-6xl font-accent text-primary-light leading-tight mb-3">
                                         {slide.title}
                                     </h2>
 
                                     {/* Thai title */}
                                     {slide.thTitle && (
-                                        <p className="text-xl md:text-2xl font-thai--accent text-primary-light opacity-50 mb-4">
+                                        <p className="text-xl md:text-lg lg:text-2xl font-thai--accent text-primary-light opacity-50 mb-4">
                                             {slide.thTitle}
                                         </p>
                                     )}
