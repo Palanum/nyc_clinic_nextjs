@@ -1,6 +1,7 @@
 "use client";
 
 import ComparisonCard from "../ui/ComparisonCard";
+import SectionHeader from "../ui/SectionHeader";
 
 const results = [
   {
@@ -50,15 +51,13 @@ function ResultSection() {
   return (
     <section className="py-16 bg-bg-cream">
       <div className="max-w-6xl mx-auto px-4">
+        <SectionHeader
+          sectionname={"real Resault"}
+          title={"Before & After"}
+          titleth={"ผลลัพธ์จริง ก่อน & หลัง"}
+        />
 
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl font-display text-primary mb-2">
-            Treatment Results
-          </h2>
-          <p className="text-sm text-text-muted">
-            Real results from our patients
-          </p>
-        </div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {results.map((item) => (

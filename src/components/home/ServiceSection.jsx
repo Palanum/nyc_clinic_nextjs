@@ -8,6 +8,7 @@ import ServiceCard, {
   ServiceCardLink,
   ServiceCardTitle,
 } from "@/components/ui/ServiceCard";
+import SectionHeader from "../ui/SectionHeader";
 
 const services = [
   {
@@ -68,18 +69,11 @@ export default function ServiceSection() {
   return (
     <section className="bg-bg-cream py-30 px-12">
       <div className="mx-auto max-w-[1200px]">
-        {/* Section Header */}
-        <div className="mb-18 text-center">
-          <p className="mb-4 font-sans text-[10px] font-semibold tracking-[5px] uppercase text-primary">
-            Our Services
-          </p>
-          <h2 className="mb-2 font-display text-[clamp(28px,4vw,44px)] font-normal tracking-luxury text-navy">
-            Treatments & Procedures
-          </h2>
-          <p className="font-thai-display text-[clamp(18px,2.5vw,24px)] font-light text-navy/50">
-            บริการของเรา
-          </p>
-        </div>
+        <SectionHeader
+          sectionname={"Our Services"}
+          title={"Treatments & Procedures"}
+          titleth={"บริการของเรา"}
+        />
 
         {/* Cards Grid */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">

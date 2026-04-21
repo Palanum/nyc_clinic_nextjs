@@ -3,11 +3,8 @@
 import { forwardRef, Children, cloneElement, isValidElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import cn from "@/utils/cn";
 
-// ─── cn utility ───────────────────────────────────────────────────────────────
-function cn(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 // ─── Variant / Size class maps ────────────────────────────────────────────────
 
