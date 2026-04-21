@@ -1,6 +1,7 @@
 "use client";
 
 import DoctorCard from "../ui/DoctorCard";
+import SectionHeader from "../ui/SectionHeader";
 
 const doctors = [
   {
@@ -41,16 +42,11 @@ export default function DoctorSection() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
-        {/* HEADER */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-display text-primary mb-2">
-            Our Doctors
-          </h2>
-          <p className="text-sm text-text-muted">
-            Meet our experienced medical team
-          </p>
-        </div>
+        <SectionHeader
+          sectionname={"Our Specialists"}
+          title={"Our Doctors"}
+          titleth={"ทีมแพทย์ผู้เชี่ยวชาญของเรา"}
+        />
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
