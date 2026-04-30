@@ -3,7 +3,7 @@ import ButtonUi from "../ui/ButtonUi";
 
 function ContactSection() {
   return (
-    <section className="py-32 px-6 bg-navy text-center">
+    <section className="py-32 px-6 bg-navy-deep text-center">
       <h2 className="font-heading text-4xl text-primary">
         Book Your Consultation
       </h2>

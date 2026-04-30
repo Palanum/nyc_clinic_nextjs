@@ -25,7 +25,7 @@ const reviews = [
 ];
 function ReviewSection() {
   return (
-    <section className="py-32 px-6 bg-navy-deep">
+    <section className="py-32 px-6 bg-navy">
       <SectionHeader
         sectionname={"Patient Stories"}
         title={"Client Reviews"}
